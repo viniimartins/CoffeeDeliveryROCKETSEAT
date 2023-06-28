@@ -12,13 +12,13 @@ export function Input({ isOptional, height, width }: InputProps) {
     const [value, setValue] = useState("");
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        
+
         setValue(event.target.value);
     };
 
 
     return (
-            <InputText
+        <InputText
 
             type="text"
             value={value}
