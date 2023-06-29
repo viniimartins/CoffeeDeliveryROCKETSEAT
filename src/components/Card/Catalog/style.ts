@@ -14,16 +14,16 @@ export const StyledCardCatalog = styled.div`
   text-align: center;
 
   background-color: ${(props) => props.theme["base-white-500"]};
+
+  & > img {
+    position: absolute;
+    top: -8%;
+    width: 50%;
+  }
 `;
 
 export const ContainerText = styled.div`
   margin: 0 1.25rem;
-`;
-
-export const Image = styled.img`
-  position: absolute;
-  top: -10%;
-  width: 50%;
 `;
 
 export const CardBadge = styled.p`
@@ -44,7 +44,7 @@ export const CardBadge = styled.p`
   font-family: "Roboto";
   text-transform: uppercase;
 
-  margin-top: 7rem;
+  margin-top: 6rem;
 `;
 
 export const TypeCoffee = styled.h1`
@@ -97,7 +97,7 @@ export const InputPrice = styled.div`
   p {
     margin-left: 0.2rem;
     font-size: 1.5rem;
-    font-family: 'Baloo 2';
+    font-family: "Baloo 2";
     font-weight: 900;
   }
 `;

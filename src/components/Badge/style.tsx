@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ShoppingCart } from "phosphor-react"
 
 export const BadgeContainer = styled.div`
-   height: 2.375rem;
+  height: 2.375rem;
   width: 2.375rem;
   position: relative;
 
@@ -12,6 +12,8 @@ export const BadgeContainer = styled.div`
   gap: 0.25rem;
   padding: 0.5rem;
   border-radius: 6px;
+
+  cursor: pointer;
 
   background-color: ${(props) => props.theme["yellow-light"]};
   border: none;

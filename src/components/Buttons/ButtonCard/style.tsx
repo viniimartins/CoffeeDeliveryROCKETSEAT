@@ -3,6 +3,8 @@ import { ShoppingCartSimple } from "phosphor-react";
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
+  width: 2.5rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,5 +26,8 @@ export const StyledButton = styled.button`
 
 
 export const StyledShoppingCard = styled(ShoppingCartSimple)`
+  width: 1.375rem;
+  height: 1.375rem;
+  
   color: ${(props) => props.theme["base-white-500"]};
 `;

@@ -1,21 +1,29 @@
-import { StyledCardCatalog, Image, CardBadge, ContainerText, TextCoffee, TypeCoffee, InputPrice, ContainerBuy } from "./style";
-import Trandional from "../../../../public/coffee/Tradicional.png"
+import { StyledCardCatalog, CardBadge, ContainerText, TextCoffee, TypeCoffee, InputPrice, ContainerBuy } from "./style";
 import { InputNumber } from "../../Input/InputNumber";
 import { ButtonCard } from "../../Buttons/ButtonCard";
 
 
-export function CardCatalog() {
+export interface CardCatalogProps {
+    imageCoffee: string
+    badge: string
+    type: string
+    text: string
+    price: number
+}
+
+
+export function CardCatalog({ imageCoffee, badge, type, text, price }: CardCatalogProps) {
     return (
         <StyledCardCatalog>
-            <Image src={Trandional} alt="" />
-            <CardBadge>Tradicional</CardBadge>
+            <img src={imageCoffee} alt="" />:
+            <CardBadge>{badge}</CardBadge>
             <ContainerText>
-                <TypeCoffee>Expresso Tradicional</TypeCoffee>
-                <TextCoffee>O tradicional café feito com água quente e grãos moídos</TextCoffee>
+                <TypeCoffee>{type}</TypeCoffee>
+                <TextCoffee>{text}</TextCoffee>
                 <ContainerBuy>
                     <InputPrice>
                         <span>R$</span>
-                        <p>9,90</p>
+                        <p>{price}</p>
                     </InputPrice>
                     <InputNumber width={4.5} />
                     <ButtonCard />

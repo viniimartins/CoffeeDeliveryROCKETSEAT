@@ -4,7 +4,9 @@ import styled from "styled-components";
 export const ContainerHeader = styled.header`
   display: flex;
 
-  padding: 2rem 10rem;
+  max-width: 70rem;
+  margin: auto;
+  padding: 2rem 0rem;
   justify-content: space-between;
 `;
 
@@ -31,6 +33,8 @@ export const ButtonCity = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
+
+  cursor: pointer;
 
   border-radius: 0.375rem;
   background-color: ${(props) => props.theme["purble-light"]};

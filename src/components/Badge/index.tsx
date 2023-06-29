@@ -7,7 +7,6 @@ interface BadgeProps {
 }
 
 export function Badge({ number }: BadgeProps) {
-
     return (
         <BadgeContainer>
             <StyledShoppingCart size={32} />
