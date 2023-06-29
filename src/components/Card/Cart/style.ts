@@ -23,11 +23,16 @@ export const StyledCardCart = styled.div`
 export const Image = styled.img`
   width: 4rem;
   height: 4rem;
+
+  margin-right: 1.25rem;
 `;
 
 export const ContainerBuy = styled.div`
   display: flex;
   flex-direction: column;
+
+  margin-right: auto;
+
 
   h1 {
     font-size: 1rem;

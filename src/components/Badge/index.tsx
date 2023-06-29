@@ -1,13 +1,21 @@
-import { BadgeContainer, NumberContainer, NumberText , StyledShoppingCart} from "./style"
+import { BadgeContainer, NumberContainer, NumberText, StyledShoppingCart } from "./style"
 
 
-export function Badge() {
+
+interface BadgeProps {
+    number: number
+}
+
+export function Badge({ number }: BadgeProps) {
+
     return (
         <BadgeContainer>
             <StyledShoppingCart size={32} />
-            <NumberContainer>
-                <NumberText>3</NumberText>
-            </NumberContainer>
+            {number !== 0 && (
+                <NumberContainer>
+                    <NumberText>{String(number)}</NumberText>
+                </NumberContainer>
+            )}
         </BadgeContainer>
-    )
+    );
 }
