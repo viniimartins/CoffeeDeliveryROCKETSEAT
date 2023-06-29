@@ -1,10 +1,16 @@
-import { Input } from "../../components/Input";
+// import { ButtonPrimary } from "../../components/Buttons/ButtonPrimary";
+import { CardCart } from "../../components/Card/Cart";
+import { CardCatalog } from "../../components/Card/Catalog";
+import { Container } from "./style";
 
 
 export function Home() {
     return (
         <>
-            <Input  isOptional={true} width={27.125} />
+            <Container>
+                <CardCatalog />
+                <CardCart />
+            </Container>
         </>
     )
 }

@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { InputText } from "./style"
+import { StyledInputText } from "./style"
 
 interface InputProps {
     isOptional?: boolean
@@ -8,18 +8,16 @@ interface InputProps {
 }
 
 
-export function Input({ isOptional, height, width }: InputProps) {
+export function InputText({ isOptional, height, width }: InputProps) {
     const [value, setValue] = useState("");
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-
         setValue(event.target.value);
     };
 
 
     return (
-        <InputText
-
+        <StyledInputText
             type="text"
             value={value}
             onChange={handleChange}

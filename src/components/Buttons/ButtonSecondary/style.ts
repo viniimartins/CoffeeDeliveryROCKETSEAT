@@ -17,6 +17,8 @@ export const StyledButton = styled.button`
   background-color: ${(props) => props.theme["base-white-900"]};
   color: ${(props) => props.theme["base-black-500"]};
 
+  cursor: pointer;
+
   :hover {
     color: ${(props) => props.theme["base-black-700"]};
     background-color: ${(props) => props.theme["base-black-100"]};

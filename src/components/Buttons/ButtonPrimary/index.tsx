@@ -2,12 +2,12 @@ import { StyledButton } from './style'
 
 interface ButtonProps {
     text: string
-    width: number
+    width?: number
 }
 
-export function ButtonPrimary({ text, width }: ButtonProps) {
+export function ButtonPrimary({ text }: ButtonProps) {
     return (
-        <StyledButton width={width} >
+        <StyledButton >
             {text}
         </StyledButton>
     )

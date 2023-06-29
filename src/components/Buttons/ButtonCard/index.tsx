@@ -1,6 +1,6 @@
 import { StyledButton, StyledShoppingCard } from "./style"
 
-export function ButtonIcon() {
+export function ButtonCard() {
     return (
         <StyledButton >
             <StyledShoppingCard size={16} />

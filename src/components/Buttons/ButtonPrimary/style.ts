@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-interface StyledProps {
-  width: number;
-}
-
-export const StyledButton = styled.button<StyledProps>`
+export const StyledButton = styled.button`
   width: 8.25rem;
 
   border-radius: 6px;
@@ -12,6 +8,7 @@ export const StyledButton = styled.button<StyledProps>`
   background-color: ${(props) => props.theme["yellow-base"]};
   color: ${(props) => props.theme["base-white-100"]};
   border: none;
+
 
   padding: 0.75rem 0.5rem;
 
@@ -26,6 +23,3 @@ export const StyledButton = styled.button<StyledProps>`
     background-color: ${(props) => props.theme["yellow-dark"]};
   }
 `;
-
-
-

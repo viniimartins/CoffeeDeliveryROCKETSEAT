@@ -12,7 +12,7 @@ export function Select() {
     };
 
     return (
-            <ButtonGroup>
+        <ButtonGroup>
             <Button
                 selected={selectedButton === 1}
                 onClick={() => handleButtonClick(1)}

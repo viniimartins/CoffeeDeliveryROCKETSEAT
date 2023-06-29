@@ -9,11 +9,13 @@ export const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.25rem;
   border-radius: 6px;
 
   background-color: ${(props) => props.theme["purble-dark"]};
   border: none;
+
+  cursor: pointer;
 
 
   :hover {

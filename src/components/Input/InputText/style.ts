@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputText = styled.input`
+export const StyledInputText = styled.input`
   width: ${({ width }) => width}rem;
   height: ${({ height }) => height}rem;
 
