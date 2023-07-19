@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 70rem;
   margin: auto;
-
 `;
 
 export const ContainerBanner = styled.section`

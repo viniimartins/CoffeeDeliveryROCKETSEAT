@@ -8,6 +8,9 @@ export const ContainerHeader = styled.header`
   margin: auto;
   padding: 2rem 0rem;
   justify-content: space-between;
+
+  display: flex;
+  align-items: center;
 `;
 
 export const ContainerButtons = styled.div`
@@ -18,6 +21,8 @@ export const ContainerButtons = styled.div`
 export const Image = styled.img`
   width: 5.3095rem;
   height: 2.5rem;
+
+  cursor: pointer;
 `;
 
 export const ButtonCity = styled.div`
@@ -26,6 +31,8 @@ export const ButtonCity = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
+
+  height: 2.375rem;
 
   color: ${(props) => props.theme["purble-dark"]};
   font-size: 0.875rem;

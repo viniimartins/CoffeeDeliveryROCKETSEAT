@@ -14,11 +14,11 @@ export const GlobalStyle = createGlobalStyle`
 
     :focus {
         outline: 0;
-        box-shadow: 0 0 0 2px ${(props) => props.theme["base-white-900"]};;
+        box-shadow: 0 0 0 1px ${(props) => props.theme["base-white-900"]};;
     }
 
     body, input, textarea, button {
-        font-family: 'Roboto' sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-weight: 400;
         font-size: 1rem;
     }

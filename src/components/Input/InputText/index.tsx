@@ -1,29 +1,26 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, ForwardedRef, forwardRef, useState } from "react";
 import { StyledInputText } from "./style"
 
 interface InputProps {
     isOptional?: boolean
     width: number
     height?: number
+    placeholder: string
+    type : string
 }
 
 
-export function InputText({ isOptional, height, width }: InputProps) {
-    const [value, setValue] = useState("");
-
-    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setValue(event.target.value);
-    };
-
+export const InputText = forwardRef(({ isOptional, height, width, placeholder, type , ...rest }: InputProps, myRef: ForwardedRef<HTMLInputElement>) => {
 
     return (
         <StyledInputText
-            type="text"
-            value={value}
-            onChange={handleChange}
-            placeholder={isOptional ? "Optional" : "Optional2"}
+            ref={myRef}
+            type={type}
+            placeholder={isOptional ? `${placeholder} - Opcional` : placeholder}
             width={width}
             height={height}
+            {...rest}
         />
     )
 }
+)

@@ -1,8 +1,16 @@
 import { StyledButton, StyledShoppingCard } from "./style"
 
-export function ButtonCard() {
+type ButtonCardProps = {
+    onClick: () => void
+}
+
+
+export function ButtonCard({ onClick }: ButtonCardProps) {
+
     return (
-        <StyledButton >
+        <StyledButton
+            onClick={onClick}
+        >
             <StyledShoppingCard size={16} />
         </StyledButton>
     )

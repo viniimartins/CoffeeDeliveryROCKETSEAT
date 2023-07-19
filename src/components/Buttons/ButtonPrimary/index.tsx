@@ -1,14 +1,16 @@
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 import { StyledButton } from './style'
 
-interface ButtonProps {
-    text: string
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     width?: number
+    children: ReactNode
+    disabled?: boolean
 }
 
-export function ButtonPrimary({ text }: ButtonProps) {
+export function ButtonPrimary({ children, disabled }: ButtonProps) {
     return (
-        <StyledButton >
-            {text}
+        <StyledButton type='submit' disabled={disabled}>
+            {children}
         </StyledButton>
     )
 }

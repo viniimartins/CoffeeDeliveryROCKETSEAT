@@ -1,38 +1,44 @@
-import { useState } from "react";
-import { Button, ButtonGroup, StyledCreditCard } from "./style";
+import { Button, ButtonGroup, StyledBank, StyledCreditCard, StyledMoney } from "./style";
 
 
+type SelectProps = {
+    onSelect: (value: string) => void
+    value: string
+
+}
 
 
-export function Select() {
-    const [selectedButton, setSelectedButton] = useState<number | null>(null);
+export function Select({ onSelect, value }: SelectProps) {
 
-    const handleButtonClick = (buttonIndex: number) => {
-        setSelectedButton(buttonIndex);
+    const handleButtonClick = (value: string) => {
+        onSelect(value);
     };
 
     return (
         <ButtonGroup>
             <Button
-                selected={selectedButton === 1}
-                onClick={() => handleButtonClick(1)}
+                type="button"
+                selected={value === 'Cartão de crédito'}
+                onClick={() => handleButtonClick('Cartão de crédito')}
             >
                 <StyledCreditCard size={32} />
                 Cartão de crédito
             </Button>
             <Button
-                selected={selectedButton === 2}
-                onClick={() => handleButtonClick(2)}
+                type="button"
+                selected={value === 'Cartão de débito'}
+                onClick={() => handleButtonClick('Cartão de débito')}
             >
-                <StyledCreditCard size={32} />
-                Cartão de crédito
+                <StyledBank size={32} />
+                Cartão de débito
             </Button>
             <Button
-                selected={selectedButton === 3}
-                onClick={() => handleButtonClick(3)}
+                type="button"
+                selected={value === 'Dinheiro'}
+                onClick={() => handleButtonClick('Dinheiro')}
             >
-                <StyledCreditCard size={32} />
-                Cartão de crédito
+                <StyledMoney size={32} />
+                Dinheiro
             </Button>
         </ButtonGroup>
     );

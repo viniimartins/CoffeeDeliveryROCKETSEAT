@@ -1,6 +1,11 @@
 import styled from "styled-components";
-import { InputProps } from ".";
 import { Minus, Plus } from "phosphor-react";
+
+type InputProps = {
+  isOptional?: boolean;
+  width: number;
+  height?: number;
+};
 
 export const StyledInputNumber = styled.div<InputProps>`
   width: ${({ width }) => width}rem;

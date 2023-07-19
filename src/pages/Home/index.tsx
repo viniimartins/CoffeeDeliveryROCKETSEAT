@@ -6,13 +6,14 @@ import Timer from "../../assets/IconBanner/Timer.svg";
 import Box from "../../assets/IconBanner/Box.svg";
 import Coffee from "../../assets/IconBanner/Coffee.svg";
 import { CardCatalog } from "../../components/Card/Catalog";
-import { Catalogo } from "./Mock";
-
-
+import { useCoffee } from "../../context/Coffee/Coffee";
 
 
 
 export function Home() {
+
+    const { coffee } = useCoffee()
+
     return (
         <>
             <Container>
@@ -58,15 +59,11 @@ export function Home() {
                         Nossos cafés
                     </h2>
                     <ContainerCatalog>
-                        {Catalogo.map(catalog => {
+                        {coffee.map(catalog => {
                             return (
                                 <CardCatalog
-                                    key={catalog.type}
-                                    imageCoffee={catalog.image}
-                                    badge={catalog.badge}
-                                    type={catalog.type}
-                                    text={catalog.text}
-                                    price={catalog.price}
+                                    coffee={catalog}
+                                    key={catalog.id}
                                 />
                             )
                         })}

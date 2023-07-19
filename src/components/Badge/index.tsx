@@ -1,7 +1,5 @@
 import { BadgeContainer, NumberContainer, NumberText, StyledShoppingCart } from "./style"
 
-
-
 interface BadgeProps {
     number: number
 }
