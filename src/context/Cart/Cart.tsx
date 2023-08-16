@@ -55,8 +55,6 @@ export function CartProvider({ children }: CartProviderProps) {
         });
     }
 
-
-
     return (
         <CartContext.Provider value={{ addToCart, removeToCart, cart, increment, decrement }}>
             {children}

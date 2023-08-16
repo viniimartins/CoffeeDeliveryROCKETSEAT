@@ -1,4 +1,4 @@
-import { ChangeEvent, ForwardedRef, forwardRef, useState } from "react";
+import { ForwardedRef, forwardRef } from "react";
 import { StyledInputText } from "./style"
 
 interface InputProps {

@@ -14,6 +14,5 @@ export function Context({ children }: ContextProps) {
                 {children}
             </CartProvider>
         </CoffeeProvider>
-
     )
 }
